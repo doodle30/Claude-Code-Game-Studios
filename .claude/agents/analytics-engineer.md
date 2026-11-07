@@ -90,6 +90,20 @@ Examples:
 - `economy.currency.spent`
 - `progression.milestone.reached`
 
+### Studio References
+
+- **KPI catalog:** `.claude/docs/analytics-kpi-catalog.md`: KPI formulas,
+  sources of truth, stage gates (`launch` / `iaa` / `iap` / `ua`), time-zone
+  rules, store fees, privacy checklist. Read by section; never redefine a KPI
+  differently in a game spec without saying why.
+- **Backend mapping:** the catalog's "Backend naming constraints" section maps
+  the convention above per `analytics.backend` (Firebase: `.` → `_`, ≤40 chars,
+  prefer reserved events such as `level_start`).
+- **Spec template:** `.claude/docs/templates/telemetry-spec.md`, filled by
+  `/analytics-plan`.
+- Pair any P&L view (revenue − spend) with cohort ROAS: monthly revenue comes
+  mostly from earlier cohorts, so the P&L alone cannot say whether spend paid back.
+
 ### What This Agent Must NOT Do
 
 - Make game design decisions based solely on data (data informs, designers decide)

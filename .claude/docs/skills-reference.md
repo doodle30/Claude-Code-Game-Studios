@@ -21,6 +21,7 @@
 | `/map-systems` | Decompose game concept into systems, map dependencies, prioritize design order |
 | `/design-system` | Guided, section-by-section GDD authoring for a single game system |
 | `/quick-design` | Lightweight design spec for small changes — tuning, tweaks, minor additions |
+| `/analytics-plan` | Telemetry event spec + stage-gated KPI definitions for this game, with code hooks |
 | `/review-all-gdds` | Cross-GDD consistency and game design holism review across all design docs |
 | `/propagate-design-change` | When a GDD is revised, find affected ADRs and produce an impact report |
 

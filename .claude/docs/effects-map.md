@@ -148,6 +148,7 @@ The rule for deciding which side a setting belongs on:
 | `qa.coverage_minimum` | Project quality bar |
 | `strict_gate_checks` | Affects whether `project.stage` advances — a project-wide write |
 | `commands.*` | Build/test commands are project facts |
+| `analytics.*` | Which backend and KPI gates the game ships with are project facts |
 | `testing.framework` | Whole project uses one framework |
 
 > **A locked key written into `project.local.yaml` by hand is reported, not
@@ -2245,6 +2246,39 @@ for you only)
   `framework.version`: an upgrade that keeps your `project.yaml` leaves that
   number behind, and the line would announce the release you already have.
 - With `false`, nothing is read and nothing is requested.
+
+---
+
+## analytics
+
+**Set by:** `/analytics-plan` (asks for absent keys, shows the block, writes it on
+approval). Project-wide; not locally overridable.
+
+```yaml
+analytics:
+  backend: firebase        # firebase | gameanalytics | unity | custom | none
+  monetization: []         # any of: iap, iaa  ([] = none planned)
+  paid_ua: false           # true once paid user acquisition (an MMP) starts
+  timezone: UTC            # one reporting time zone for every source
+  spec: docs/analytics/telemetry-spec.md
+```
+
+| Key | Effect |
+|-----|--------|
+| `backend` | Picks the naming map and limits from the "Backend naming constraints" section of `.claude/docs/analytics-kpi-catalog.md` |
+| `monetization` | Turns on the catalog's `iap` / `iaa` KPI gates in the spec |
+| `paid_ua` | Turns on the `ua` gate (CPI, cohort ROAS, marketing profit) |
+| `timezone` | Written into the spec's data-source section; the backend and ad reports should match it |
+| `spec` | Output path of `/analytics-plan` |
+
+**Absent keys:** `/analytics-plan` asks. If the question is skipped, an
+unanswered gate counts as **on** and the spec header says so. The skill never
+drops KPI rows because a key is absent.
+
+| Skill / agent | Reads |
+|---------------|-------|
+| `/analytics-plan` | all keys |
+| `analytics-engineer` | `backend` (naming), gates (which KPIs) via the skill's brief |
 
 ---
 

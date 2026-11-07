@@ -109,6 +109,7 @@ Ask yourself: "What department would handle this in a real studio?"
 | `/map-systems` | Decompose concept into systems, map dependencies, guide per-system GDDs |
 | `/design-system` | Guided, section-by-section GDD authoring for a single game system |
 | `/quick-design` | Lightweight spec for small changes — tuning, tweaks, minor additions |
+| `/analytics-plan` | Telemetry event spec + KPI definitions with code hooks |
 | `/review-all-gdds` | Cross-GDD consistency and game design theory review |
 | `/propagate-design-change` | Find ADRs and stories affected by a GDD change |
 | `/art-bible` | Guided, section-by-section Art Bible authoring — creates visual identity spec before asset production |

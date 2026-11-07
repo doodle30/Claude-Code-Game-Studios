@@ -390,6 +390,17 @@ skills:
     priority: low
     category: authoring
 
+  - name: analytics-plan
+    spec: ""
+    last_static: ""
+    last_static_result: ""
+    last_spec: ""
+    last_spec_result: ""
+    last_category: ""
+    last_category_result: ""
+    priority: low
+    category: authoring
+
   - name: ux-design
     spec: studio-tests/skills/authoring/ux-design.md
     last_static: ""

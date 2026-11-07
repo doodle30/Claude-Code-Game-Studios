@@ -275,7 +275,7 @@ emitting every track; if it cannot be determined, emit
 - [ ] Pricing configured for all regions
 
 ### Launch Readiness
-- [ ] Analytics / telemetry verified and receiving data
+- [ ] Analytics / telemetry verified and receiving data (events match `analytics.spec`; new events since last release added to it)
 - [ ] Crash reporting configured and dashboard accessible
 - [ ] Day-one patch prepared and tested (if needed)
 - [ ] On-call team schedule set for first 72 hours

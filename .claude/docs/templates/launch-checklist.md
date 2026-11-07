@@ -126,6 +126,9 @@ Generated: [Date]
 - [ ] Server monitoring dashboards live
 - [ ] Key metrics tracked: DAU, session length, retention, crashes
 - [ ] Alerts configured for critical thresholds
+- [ ] Telemetry spec exists (`analytics.spec`, from `/analytics-plan`) and every Phase 1 event shows in the backend's debug view
+- [ ] Analytics property and ad-network report time zones match `analytics.timezone`
+- [ ] Privacy and pre-launch store items in `.claude/docs/analytics-kpi-catalog.md` done (data safety, target age, consent, store fee tier, package ID final)
 
 ---
 
